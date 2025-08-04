@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+  </head>
+  <body>
+    <h1>La tienda de la esquina</h1>
+    <p>
+      Bienvenido a la tienda de la esquina. Aquí encontrarás una variedad de
+      productos.
+    </p>
+    <p>Explora nuestras categorías y descubre ofertas especiales.</p>
+    <p>¡Gracias por visitarnos!</p>
+    <h2>Categorías</h2>
+    <ul>
+      <% categories.forEach(category => { %>
+      <li><%= category.name %></li>
+      <% }) %>
+    </ul>
+  </body>
+</html>
