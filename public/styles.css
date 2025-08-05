@@ -1,0 +1,16 @@
+.category {
+  border: 1px solid navy;
+  padding: 0 10px;
+}
+
+.category:hover {
+  background-color: lightblue;
+  cursor: pointer;
+}
+
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+}
