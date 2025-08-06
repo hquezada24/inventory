@@ -1,6 +1,7 @@
 .category {
   border: 1px solid navy;
   padding: 0 10px;
+  background-color: transparent;
 }
 
 .category:hover {
