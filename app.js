@@ -14,6 +14,9 @@ app.set("view engine", "ejs");
 
 app.use("/", indexRouter);
 app.use("/categories", categoryRouter);
+app.use((req, res) => {
+  res.status(404).render("404"); // where views/404.ejs exists
+});
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
