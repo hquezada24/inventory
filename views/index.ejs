@@ -18,7 +18,7 @@
     <div class="categories">
       <% categories.forEach(category => { %>
       <button class="category">
-        <p><%= category.name %></p>
+        <a href="/categories/<%= category.slug %>"><%= category.name %></a>
       </button>
       <% }) %>
     </div>
