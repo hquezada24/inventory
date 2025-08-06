@@ -1,4 +1,5 @@
-.category {
+.category,
+.item {
   border: 1px solid navy;
   padding: 0 10px;
   background-color: transparent;
@@ -9,7 +10,8 @@
   cursor: pointer;
 }
 
-.categories {
+.categories,
+.items {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;

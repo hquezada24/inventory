@@ -17,12 +17,11 @@ async function getItemsByCategoryId(id) {
   return rows;
 }
 
-async function getCategoryId(slug) {
+async function getCategory(slug) {
   const { rows } = await pool.query(
-    "SELECT id FROM categories WHERE slug = $1",
+    "SELECT id, name FROM categories WHERE slug = $1",
     [slug]
   );
-  console.log(slug);
   return rows[0];
 }
 
@@ -30,5 +29,5 @@ module.exports = {
   getAllCategories,
   insertCategoy,
   getItemsByCategoryId,
-  getCategoryId,
+  getCategory,
 };

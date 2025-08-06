@@ -4,10 +4,15 @@ async function getItemsByCategoryId(req, res) {
   // get slug
   const slug = req.params.slug;
 
-  const id = await db.getCategoryId(slug);
-  console.log(id.id);
-  const items = await db.getItemsByCategoryId(id.id);
-  res.render("index", { items });
+  // get category id and its name
+  const { id, name } = await db.getCategory(slug);
+
+  // get the items from that category
+  const items = await db.getItemsByCategoryId(id);
+
+  console.log(items);
+  // render
+  res.render("category", { name, items });
 }
 
 module.exports = { getItemsByCategoryId };
